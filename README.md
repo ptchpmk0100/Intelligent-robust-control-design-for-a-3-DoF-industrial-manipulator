@@ -107,30 +107,77 @@ Industrial robot controllers must maintain precision despite nonlinear coupling,
 
 ## 📊 Representative results
 
-> Add the generated images to the paths below to display the result gallery directly on the repository landing page.
+<p align="center">
+  <strong>Disturbed square-wave response — Joint 1</strong><br>
+  <sub>Stress test with abrupt reference changes and modeled disturbances. Click any plot to open it at full resolution.</sub>
+</p>
 
-| Control input | Angle tracking | Tracking error |
-|:---:|:---:|:---:|
-| ![Disturbed square-wave control input](figures/control_input/Square_Disturbed_ControlInput1.jpg) | ![Disturbed square-wave angle tracking](figures/angle_tracking/Square_Disturbed_AngleTracking1.jpg) | ![Disturbed square-wave tracking error](figures/error_tracking/Square_Disturbed_ErrorLink1.jpg) |
-| **Torque response** | **Desired vs. actual trajectory** | **Joint tracking error** |
+<table>
+  <tr>
+    <th width="33%">Control input</th>
+    <th width="33%">Angle tracking</th>
+    <th width="33%">Tracking error</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="results_figures/square_wave/disturbed_signal/Square_Disturbed_ControlInput1.jpg">
+        <img src="results_figures/square_wave/disturbed_signal/Square_Disturbed_ControlInput1.jpg" alt="Joint 1 disturbed square-wave control input" width="100%">
+      </a>
+    </td>
+    <td align="center">
+      <a href="results_figures/square_wave/disturbed_signal/Square_Disturbed_AngleTracking1.jpg">
+        <img src="results_figures/square_wave/disturbed_signal/Square_Disturbed_AngleTracking1.jpg" alt="Joint 1 disturbed square-wave angle tracking" width="100%">
+      </a>
+    </td>
+    <td align="center">
+      <a href="results_figures/square_wave/disturbed_signal/Square_Disturbed_ErrorLink1.jpg">
+        <img src="results_figures/square_wave/disturbed_signal/Square_Disturbed_ErrorLink1.jpg" alt="Joint 1 disturbed square-wave tracking error" width="100%">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Torque demand and switching smoothness</sub></td>
+    <td align="center"><sub>Desired versus actual joint trajectory</sub></td>
+    <td align="center"><sub>Transient and steady-state tracking error</sub></td>
+  </tr>
+</table>
+
+<details open>
+<summary><strong>🗂️ Browse all experiment groups</strong></summary>
+<br>
+
+| Reference input | Operating condition | Available outputs | Results |
+|---|---|---|---|
+| Sine wave | Ideal model | Control input · angle tracking · tracking error · joints 1–3 | [Open folder](results_figures/sine_wave/ideal_signal/) |
+| Sine wave | Disturbed model | Control input · angle tracking · tracking error · joints 1–3 | [Open folder](results_figures/sine_wave/disturbed_signal/) |
+| Square wave | Ideal model | Control input · angle tracking · tracking error · joints 1–3 | [Open folder](results_figures/square_wave/ideal_signal/) |
+| Square wave | Disturbed model | Control input · angle tracking · tracking error · joints 1–3 | [Open folder](results_figures/square_wave/disturbed_signal/) |
+
+</details>
 
 <details>
-<summary><strong>🖼️ Suggested result gallery organization</strong></summary>
+<summary><strong>📁 Result directory structure</strong></summary>
+<br>
 
 ```text
-figures/
-├── control_input/
-│   ├── Sine_Ideal_ControlInput1.jpg
-│   ├── Sine_Disturbed_ControlInput1.png
-│   ├── Square_Ideal_ControlInput1.png
-│   └── Square_Disturbed_ControlInput1.jpg
-├── angle_tracking/
-│   └── Square_Disturbed_AngleTracking1.jpg
-└── error_tracking/
-    └── Square_Disturbed_ErrorLink1.jpg
+results_figures/
+├── sine_wave/
+│   ├── ideal_signal/
+│   │   ├── Sine_Ideal_ControlInput[1-3].jpg
+│   │   ├── Sine_Ideal_TrackingAngle[1-3].png
+│   │   └── Sine_Ideal_ErrorLink[1-3].png
+│   └── disturbed_signal/
+│       ├── Sine_Disturbed_ControlInput[1-3].png
+│       ├── Sine_Disturbed_AngleTracking[1-3].png
+│       └── Sine_Disturbed_ErrorLink[1-3].png
+└── square_wave/
+    ├── ideal_signal/
+    │   └── control input, angle tracking, and error plots for joints 1–3
+    └── disturbed_signal/
+        ├── Square_Disturbed_ControlInput[1-3].jpg
+        ├── Square_Disturbed_AngleTracking[1-3].jpg
+        └── Square_Disturbed_ErrorLink[1-3].jpg
 ```
-
-Use consistent filenames for joints 1–3 so readers can compare the same experiment across all axes.
 
 </details>
 
