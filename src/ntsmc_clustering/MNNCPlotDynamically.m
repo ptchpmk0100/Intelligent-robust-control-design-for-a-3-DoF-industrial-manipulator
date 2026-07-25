@@ -84,3 +84,7 @@ for d = 1:3 % Iterate over the datasets (e1, e2, e3)
         hold off;
     end
 end
+<<<<<<< HEAD
+=======
+
+>>>>>>> 74fd74ee2e40386f4fe8e0f3145f9dbfabcc9fff

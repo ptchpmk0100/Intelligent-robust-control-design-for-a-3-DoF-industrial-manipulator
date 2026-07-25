@@ -98,6 +98,10 @@ function clusters = MNNC(data, H, Nmin)
         end
     end
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 74fd74ee2e40386f4fe8e0f3145f9dbfabcc9fff
     % Step 6: Merge clusters only if the centroid distance is below a specified threshold
     % merge_threshold = 0.0285; % Define a threshold for merging clusters
     merge_threshold = 0.20;
@@ -122,6 +126,7 @@ function clusters = MNNC(data, H, Nmin)
             end
         end
     end 
+      
 
     % Step 7: Merge small clusters into the nearest cluster
     for i = 1:n
@@ -153,3 +158,7 @@ function clusters = MNNC(data, H, Nmin)
     clusters = clusters(~cellfun('isempty', clusters));
 
 end
+<<<<<<< HEAD
+=======
+
+>>>>>>> 74fd74ee2e40386f4fe8e0f3145f9dbfabcc9fff
